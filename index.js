@@ -7,6 +7,10 @@
  */
 function convertToCelsius(f) {
   // TODO
+  //Celsius = (Fahrenheit - 32) / 1.8
+  let c = convertToCelsius;
+  c = (f - 32) / 1.8;
+  return c;
 }
 
 /**
@@ -24,6 +28,21 @@ function convertToCelsius(f) {
  */
 function describeTemperature(f) {
   // TODO
+  let dT = describeTemperature;
+  if (f <= 32) {
+    dT = "Very Cold";
+  } else if (f < 64 && f > 32) {
+    dT = "Cold";
+  } else if (f < 86 && f > 64) {
+    dT = "Warm";
+  } else if (f < 100 && f > 86) {
+    dT = "Hot";
+  } else if (f >= 100) {
+    dT = "Very Hot";
+  } else {
+    dT = "Probably stay in side either way";
+  }
+  return dT;
 }
 
 /**
@@ -32,6 +51,7 @@ function describeTemperature(f) {
  */
 function getRandomInt(limit) {
   // TODO
+  return Math.floor(Math.random() * 50 + limit);
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
